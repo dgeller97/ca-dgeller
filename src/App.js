@@ -1,5 +1,11 @@
-//import logo from './logo.svg';
 import './App.scss';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Experience from './components/Experience/Experience';
+import Home from './components/Home/Home';
+import Logo from './components/Logo/Logo';
+import Projects from './components/Projects/Projects';
+
 
 
 
@@ -10,28 +16,35 @@ function App() {
     <div className="App">
 
       <header className="App-header">
-        <h1>
-          David Geller
-        </h1>
+        <div className="Logo-container">
+        <Logo size="1.2em"> </Logo>  {/* left side */}
+        </div>
 
-        <div className='menu'>
+        <div className='Menu'> 
           <ul>
             <li>
-              <a href='/'>Home</a>
+              <a href='#About'>About</a>
             </li>
             <li>
-              <a href='/about'>About</a>
+              <a href='#Experience'>Experience</a>
+            </li>
+            <li>
+              <a href='#Projects'>Projects</a>
+            </li>
+            <li>
+              <a href='#Contact'>Contact</a>
             </li>
           </ul>
         </div>
 
       </header>
 
-      <div clasName='body'>
-        <img src="https://cdn.geekwire.com/wp-content/uploads/2019/05/Clippy.jpg.jpg" className="App-logo" alt="logo" />
-          <p>
-            Under construction
-          </p>
+      <div clasName='Body'> 
+        <Home></Home>
+        <About></About>
+        <Experience></Experience>
+        <Projects></Projects>
+        <Contact></Contact>
       </div>
     </div>
   );
