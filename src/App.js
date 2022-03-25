@@ -17,7 +17,7 @@ function App() {
 
       <header className="App-header">
         <div className="Logo-container">
-        <Logo size="1.2em"> </Logo>  {/* left side */}
+        <Logo size="0.6em"> </Logo>  
         </div>
 
         <div className='Menu'> 
@@ -39,7 +39,7 @@ function App() {
 
       </header>
 
-      <div clasName='Body'> 
+      <div className='Body'> 
         <Home></Home>
         <About></About>
         <Experience></Experience>
