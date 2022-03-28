@@ -3,20 +3,23 @@ $accent:  #0e94ff;
 
 .App {
   font-size: 16px;
-  padding: 0 6em;
 }
 
 .App-header {
-  position: sticky;
-  top:0;
-
+  position: fixed;
+  top:  0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: #202020e0;
+  box-shadow: 0px 0px 20px 20px #202020e3;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content:space-between;
-  padding: 2em 0em;
+  padding: 2em 6em;
   font-size: 1em;
-  color: rgb(255, 255, 255);
+
   h1{
     font-size: 5em;
   }
@@ -32,8 +35,7 @@ $accent:  #0e94ff;
       margin: 0 .6em;
       background: none;
       
-       a{
-        color: white;
+       a.link{
         text-decoration: none;
         border-bottom: 4px solid transparent;
         transition: border-bottom-color 0.4s ease;
@@ -45,27 +47,33 @@ $accent:  #0e94ff;
            border-bottom-color: $accent;
          }
        }
+
+       a.button{
+            padding: 0.6em 1em;
+       }
     }
   }
 }
 
+.Body{
+  padding: 0 6em;
+}
+
 .section{
-  padding-top: 6em;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1400px;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
-.Big-Heading{
-  font-size: 4em;
-  color: white;
-  text-align: center;
-}
-
 .Heading{
-  color: white;
   font-size: 2em;
   text-align: left;
   position: relative;
+  width: 100%;
 
     span{
       background: #202020;
@@ -80,7 +88,7 @@ $accent:  #0e94ff;
       top: 50%;
       height: 1px;
       margin-left: 1em;
-      width: 100%;
+      width: calc(100% - 1em);
       background-color: #0e94ff;
       z-index: -1;
     }
@@ -88,6 +96,24 @@ $accent:  #0e94ff;
 
 ::after{
   box-sizing: inherit;
+}
+
+.button{
+  background: 0;
+  border: 1px solid $accent;
+  color: $accent;
+  padding: 0.8em 2.2em;
+  border-radius: 0.4em;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+
+  &:visited{
+    color: $accent !important;
+  }
 }
 
 
@@ -98,4 +124,5 @@ html {
 
 body {
   background-color: $background;
+  color: white;
 }

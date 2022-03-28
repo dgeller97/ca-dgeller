@@ -23,22 +23,27 @@ function App() {
         <div className='Menu'> 
           <ul>
             <li>
-              <a href='#About'>About</a>
+              <a className='link' href='#About'>About</a>
             </li>
             <li>
-              <a href='#Experience'>Experience</a>
+              <a className='link' href='#Experience'>Experience</a>
             </li>
             <li>
-              <a href='#Projects'>Projects</a>
+              <a className='link' href='#Projects'>Projects</a>
             </li>
             <li>
-              <a href='#Contact'>Contact</a>
+              <a  className='link' href='#Contact'>Contact</a>
+            </li>
+            <li>
+              <a className='button' href='/david-geller-resume.pdf' target="_blank">
+                Resume
+              </a>
             </li>
           </ul>
         </div>
 
       </header>
-
+    
       <div className='Body'> 
         <Home></Home>
         <About></About>
